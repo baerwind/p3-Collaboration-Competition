@@ -27,13 +27,13 @@ I tried several learning rates for Actor and Critic.<br>
 5e-4(lr of Actor) and 3e-3(lr of Critic) were best.<br>
 
 Also, I tuned number of nodes in layers of Actor and Critic among [(512, 256), (256, 128)].<br>
-(512, 256) seems to be beter.<br>
+(512, 256) seems to be better.<br>
 
 It did take quite long for me to find out that the Sigma of Ornstein-Uhlenbeck process was so critic to get a fast learning agent.<br>
 0.01 was best for this environment.<br>
-Similar for tau, i did start my search 1e-3 but it model did learn much only with much bigger tau, so  i did choose tau = 0.15 .
+Similar for tau, i did start my search 1e-3 but the model did learn only with much bigger tau, so  i did choose tau = 0.15 .
 
-### Model architectures
+### Model architecture
 There are two neural networks as the actor and the critic.
 
 Batch normalization made a big improvement.
@@ -45,4 +45,4 @@ Leaky ReLU was used instead of ReLU for better performance.<br>
 
 ### Ideas for Future Work
 1. In this project, only MADDPG was tested. Multi agent PPO/TRPO or other algorithms can be tested.
-2. More complex model can be tested like 3 or more layers instead of 2 layers. Also, dropout could be applied.
+2. More complex model can be tested, 3 or more layers instead of 2 layers. Also, dropout could be applied.
